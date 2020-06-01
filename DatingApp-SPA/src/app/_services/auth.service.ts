@@ -22,5 +22,8 @@ export class AuthService {
     );
   }
 
+  register(model: any): Observable<Object> {
+    return this.http.post(this.baseUrl + 'register', model);
+  }
 
 }
