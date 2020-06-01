@@ -7,9 +7,18 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  isRegisterMode = false;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
+  }
+
+  toggleRegisterMode(): void {
+    this.isRegisterMode = true;
+  }
+
+  cancelRegisterMode(isRegisterMode: boolean): void {
+    this.isRegisterMode = isRegisterMode;
   }
 }
