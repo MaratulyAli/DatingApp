@@ -7,12 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  baseUrl: String = 'http://localhost:5000/api/auth/';
+  baseUrl: String = 'http://localhost:5000/api/auth';
 
   constructor(private http: HttpClient) { }
 
   login(model: any): Observable<void> {
-    return this.http.post(this.baseUrl + 'login', model).pipe(
+    return this.http.post(this.baseUrl + '/login', model).pipe(
       map((response: any) => {
         const user = response;
         if (user) {
@@ -23,7 +23,7 @@ export class AuthService {
   }
 
   register(model: any): Observable<Object> {
-    return this.http.post(this.baseUrl + 'register', model);
+    return this.http.post(this.baseUrl + '/register', model);
   }
 
 }
