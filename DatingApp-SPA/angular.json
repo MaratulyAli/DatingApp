@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "DatingApp-SPA"
+  "defaultProject": "DatingApp-SPA",
+  "cli": {
+    "analytics": false
+  }
 }
