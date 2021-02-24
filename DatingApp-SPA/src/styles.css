@@ -4,3 +4,96 @@
 @import '../node_modules/font-awesome/css/font-awesome.min.css';
 @import '../node_modules/alertifyjs/build/css/alertify.min.css';
 @import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+
+:root {
+  --main-border-color:rgba(0,0,0,0.6);
+  --white: #fff;
+  --gray: #7a8288;
+  --gray-dark: #3a3f44;
+  --light: #e9ecef;
+  --dark: #272b30;
+}
+
+.tab-panel {
+  border: 1px solid var(--main-border-color);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.nav-tabs {
+  border-bottom: 4px solid var(--gray-dark);
+}
+
+.nav-tabs .nav-link {
+  border: 0;
+  background: none;
+}
+
+.nav-tabs .nav-link:not([disabled]):not(.disabled):hover,
+.nav-tabs .nav-link:not([disabled]):not(.disabled):focus,
+.nav-tabs .nav-link:not([disabled]):not(.disabled):active,
+.nav-tabs .nav-link:not([disabled]):not(.disabled).active {
+  background-image: none;
+}
+
+.nav-tabs .nav-item {
+  margin: 0;
+}
+
+.nav-tabs > li.open, .member-tabset > .nav-tabs > li {
+  border-bottom: 2px solid transparent;
+}
+  
+.nav-tabs > li.open, .member-tabset > .nav-tabs > li:hover {
+  border-bottom: 2px solid var(--gray);
+}
+
+.member-tabset > .nav-tabs > li.active {
+  border-bottom: 2px solid var(--light);
+  position: relative;
+}
+  
+.member-tabset > .nav-tabs > li.open > a, .member-tabset > .nav-tabs > li:hover > a {
+  background: none !important;
+  color: var(--light);
+}
+  
+.member-tabset > .nav-tabs > li.open > a > i, .member-tabset > .nav-tabs > li:hover > a > i {
+  color: var(--gray);
+}
+  
+.member-tabset > .nav-tabs > li.open .dropdown-menu, .member-tabset > .nav-tabs > li:hover .dropdown-menu {
+  margin-top: 0px;
+}
+  
+.member-tabset > .nav-tabs > li.active > a {
+  color: var(--light);
+}
+  
+.member-tabset > .nav-tabs > li.active > a > i {
+  color: #404040;
+}
+  
+.member-tabset > .tab-content {
+  margin-top: -3px;
+  background-color: var(--dark);
+  border: 0;
+  padding: 15px 0;
+}
+
+.spinner {
+  border: 5px solid #f3f3f3;     /* Light grey */
+  border-top: 5px solid #3d3e3f; /* gray */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 2s ease infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
